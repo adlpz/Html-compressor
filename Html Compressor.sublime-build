@@ -1,41 +1,41 @@
 {
 	"cmd": [
 		"java",
-		"-jar", "${packages}/HTML Compressor/bin/htmlcompressor-1.5.3.jar",
+		"-jar", "${packages}/Html-compressor/bin/htmlcompressor-1.5.3.jar",
 		"--type", "html",
 		"--remove-quotes",
 		"--compress-js",
 		"--compress-css",
-		"-o", "${file_base_name}.min.${file_extension}",
+		"-o", "~/minify/${file_name}",
 		"$file"
 	],
     "windows": {
         "cmd": [
 			"java",
-			"-jar", "${packages}\\HTML Compressor\\bin\\htmlcompressor-1.5.3.jar",
+			"-jar", "${packages}\\Html-compressor\\bin\\htmlcompressor-1.5.3.jar",
 			"--type", "html",
 			"--remove-quotes",
 			"--compress-js",
 			"--compress-css",
-			"-o", "${file_base_name}.min.${file_extension}",
+			"-o", "~/minify/${file_name}",
 			"$file"
 		]
     },
     "osx": {
         "cmd": [
 			"java",
-			"-jar", "${packages}/HTML Compressor/bin/htmlcompressor-1.5.3.jar",
+			"-jar", "${packages}/Html-compressor/bin/htmlcompressor-1.5.3.jar",
 			"--type", "html",
 			"--remove-quotes",
 			"--compress-js",
 			"--compress-css",
-			"-o", "${file_base_name}.min.${file_extension}",
+			"-o", "~/minify/${file_name}",
 			"$file"
 		]
     },
     "linux": {
         "cmd": [
-        	"java -jar '${packages}/HTML Compressor/bin/htmlcompressor-1.5.3.jar' --compress-js --compress-css $file -o ${file_base_name}.min.${file_extension}"	
+        	"java -jar '${packages}/Html-compressor/bin/htmlcompressor-1.5.3.jar' --compress-js --compress-css $file -o ~/minify/${file_name}"	
 		],
 		"shell": true
     },
